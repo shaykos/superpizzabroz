@@ -13,7 +13,9 @@ class DB {
 
     async FindAll(collection, query = {}, project = {}) {
         try {
+            console.log(3)
             await this.client.connect();
+            console.log(4)
             return await this.client.db(this.db_name).collection(collection).find(query, project).toArray();
         } catch (error) {
             throw error;

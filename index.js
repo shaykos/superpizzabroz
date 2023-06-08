@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const PORT = 5500 || process.env.PORT;
+const PORT = process.env.PORT || 5500;
 
 //יצירת השרת
 let server = express();

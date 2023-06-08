@@ -16,6 +16,7 @@ class MenuModel {
     //מחיקה
     //שליפה
     static async GetAllItems() {
+        console.log(2);
         return await new DB().FindAll('Menu');
     }
 

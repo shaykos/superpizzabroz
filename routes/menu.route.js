@@ -7,7 +7,9 @@ const MenuRoute = require('express').Router();
 //Read (using http get)
 MenuRoute.get('/', async (req, res) => {
     try {
+        console.log(1);
         let data = await MenuModel.GetAllItems();
+        console.log(5, data)
         res.status(200).json(data);
     }
     catch (error) {
